@@ -1,0 +1,69 @@
+@baseUrl = http://localhost:8000/api/v1
+
+
+POST {{baseUrl}}/products/
+Content-Type: application/json
+{
+  "title": "Помидор 3",
+  "description": "Помидоры 2"
+}
+
+
+GET {{baseUrl}}/products/
+Content-Type: application/json
+
+
+PATCH {{baseUrl}}/products/1/
+Content-Type: application/json
+{
+  "description": "Самые хорошие помидоры"
+}
+
+
+DELETE {{baseUrl}}/products/1/
+Content-Type: application/json
+
+
+GET {{baseUrl}}/products/?search=2
+Content-Type: application/json
+
+
+POST {{baseUrl}}/stocks/
+Content-Type: application/json
+{
+  "address": "адрес",
+  "positions": [
+    {
+      "product": 2,
+      "quantity": 250,
+      "price": 125.50
+    },
+    {
+      "product": 3,
+      "quantity": 100,
+      "price": 150
+    }
+  ]
+}
+
+
+PATCH {{baseUrl}}/stocks/1/
+Content-Type: application/json
+{
+  "positions": [
+    {
+      "product": 2,
+      "quantity": 100,
+      "price": 130.80
+    },
+    {
+      "product": 3,
+      "quantity": 245,
+      "price": 145
+    }
+  ]
+}
+
+
+GET {{baseUrl}}/stocks/?products=3
+Content-Type: application/json
