@@ -4,8 +4,8 @@
 POST {{baseUrl}}/products/
 Content-Type: application/json
 {
-  "title": "Помидор 3",
-  "description": "Помидоры 2"
+  "title": "p1",
+  "description": "product 1"
 }
 
 
@@ -16,7 +16,7 @@ Content-Type: application/json
 PATCH {{baseUrl}}/products/1/
 Content-Type: application/json
 {
-  "description": "Самые хорошие помидоры"
+  "description": "product 1.2"
 }
 
 
@@ -31,16 +31,16 @@ Content-Type: application/json
 POST {{baseUrl}}/stocks/
 Content-Type: application/json
 {
-  "address": "адрес",
+  "address": "address 1",
   "positions": [
     {
-      "product": 2,
-      "quantity": 250,
-      "price": 125.50
+      "product": 1,
+      "quantity": 10,
+      "price": 100.25
     },
     {
-      "product": 3,
-      "quantity": 100,
+      "product": 2,
+      "quantity": 20,
       "price": 150
     }
   ]
@@ -54,12 +54,12 @@ Content-Type: application/json
     {
       "product": 2,
       "quantity": 100,
-      "price": 130.80
+      "price": 120.50
     },
     {
       "product": 3,
-      "quantity": 245,
-      "price": 145
+      "quantity": 250,
+      "price": 150
     }
   ]
 }
